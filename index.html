@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Etch-a-Sketch 🎨</h1>
+      <button id="themeToggle" class="theme-toggle">Modo Oscuro</button>
+    </header>
+    <main class="main">
+      <section class="settings">
+        <input id="colorPicker" type="color" value="#333333" />
+        <button id="colorBtn">Modo Color</button>
+        <button id="rainbowBtn">Modo Arcoíris</button>
+        <button id="eraserBtn">Borrador</button>
+        <button id="clearBtn">Limpiar</button>
+        <div id="sizeValue" class="size-value">16 x 16</div>
+        <input id="sizeSlider" type="range" min="2" max="64" value="16" />
+        <p id="moveCount">Movimientos: 0</p>
+        <button id="downloadBtn">Descargar Cuadrícula</button>
+      </section>
+      <section id="grid" class="grid"></section>
+    </main>
+    <footer class="footer">
+      <p>© 2024 Etch-a-Sketch Mejorado</p>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

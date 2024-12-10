@@ -1,0 +1,108 @@
+:root {
+  --primary-bg: #ffffff;
+  --primary-text: #000000;
+  --secondary-bg: #f4f4f4;
+  --accent: #4caf50;
+  --border-color: #dddddd;
+}
+
+[data-theme="dark"] {
+  --primary-bg: #121212;
+  --primary-text: #ffffff;
+  --secondary-bg: #1e1e1e;
+  --accent: #bb86fc;
+  --border-color: #333333;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--accent);
+  color: var(--primary-bg);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #2ecc71;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+button,
+input[type="range"] {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: var(--secondary-bg);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover,
+input[type="range"]:hover {
+  transform: scale(1.1);
+}
+
+button.active {
+  background-color: var(--accent);
+  color: var(--primary-bg);
+}
+
+.grid {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.grid-element {
+  user-select: none;
+  border: 0.5px solid var(--border-color);
+}
+
+.size-value,
+#moveCount {
+  font-size: 1.2rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
